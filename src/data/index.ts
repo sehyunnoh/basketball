@@ -1,14 +1,24 @@
 import type { Category, CategoryId, Level, Skill } from '../types'
 import { CATEGORIES } from './categories'
+import { DEFENSE } from './skills/defense'
 import { DRIBBLING } from './skills/dribbling'
+import { FINISHING } from './skills/finishing'
 import { FUNDAMENTALS } from './skills/fundamentals'
+import { PASSING } from './skills/passing'
 import { SHOOTING } from './skills/shooting'
 
 /**
  * The single place new content lands. Adding a phase 2 category means adding a
  * file here and nothing else — no screen knows the category list up front.
  */
-export const SKILLS: Skill[] = [...FUNDAMENTALS, ...DRIBBLING, ...SHOOTING]
+export const SKILLS: Skill[] = [
+  ...FUNDAMENTALS,
+  ...DRIBBLING,
+  ...SHOOTING,
+  ...FINISHING,
+  ...PASSING,
+  ...DEFENSE,
+]
 
 export const SKILL_BY_ID = new Map(SKILLS.map((s) => [s.id, s]))
 
