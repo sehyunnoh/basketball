@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=Zilla+Slab:wght@600;700&display=swap');
+    :root {
+      --paper: #f7f7f5;
+      --surface: #ffffff;
+      --ink: #151517;
+      --ink2: #56565c;
+      --ink3: #7a7a80;
+      --rule: #dddcd8;
+      --rule-strong: #151517;
+      --accent: #c2410c;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'IBM Plex Sans', system-ui, sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    a { color: var(--accent); }
+    a:hover { color: var(--ink); }
+    .slab { font-family: 'Zilla Slab', Georgia, serif; }
+    .label {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--ink3);
+      line-height: 1.4;
+    }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid var(--rule);
+      border-radius: 3px;
+      padding: 1px 8px;
+      font-size: 12px;
+      color: var(--ink3);
+      white-space: nowrap;
+    }
+    .thumb { background: #cfcec9; flex: none; }
+    .row { display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--rule); }
+    .meter { display: inline-flex; align-items: flex-end; gap: 2px; }
+    .meter i { display: block; width: 3px; background: var(--rule); }
+  </style>
+</helmet>
+
+<div style="width: 390px; height: 940px; position: relative; overflow: hidden; background: var(--paper)">
+
+  <div style="padding: 12px 16px 8px">
+    <div style="display: flex; align-items: center; gap: 8px">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+        <circle cx="12" cy="12" r="9.5"></circle>
+        <path d="M12 2.5v19M2.5 12h19"></path>
+        <ellipse cx="12" cy="12" rx="4.4" ry="9.5"></ellipse>
+      </svg>
+      <span class="slab" style="font-size: 19px; font-weight: 700">Hoops Handbook</span>
+    </div>
+  </div>
+  <div style="padding: 0 16px">
+    <div style="height: 2px; background: var(--rule-strong)"></div>
+    <div style="height: 1px; background: var(--rule-strong); margin-top: 2px"></div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 16px; padding: 20px 16px 0">
+
+    <span class="slab" style="font-size: 26px; font-weight: 700; line-height: 1.2">Search</span>
+
+    <div style="display: flex; align-items: center; gap: 10px; padding: 0 14px; border: 1px solid var(--ink3); border-radius: 3px; background: var(--surface)">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--ink3)" stroke-width="2" stroke-linecap="round">
+        <circle cx="11" cy="11" r="7"></circle>
+        <path d="M20 20l-4.5-4.5"></path>
+      </svg>
+      <span style="padding: 12px 0">dribble</span>
+    </div>
+
+    <div>
+      <div class="label" style="margin-bottom: 6px">4 results</div>
+
+      <div style="border-top: 2px solid var(--rule-strong)">
+        <div class="row">
+          <div class="thumb" style="width: 108px; height: 61px"></div>
+          <div style="flex-grow: 1; min-width: 0">
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px">
+              <span class="slab" style="font-size: 16px; font-weight: 600">Control Dribble</span>
+              <span style="font-size: 12px; color: var(--ink3)">Dribbling · L1</span>
+              <span class="meter">
+                <i style="height: 7px; background: var(--ink)"></i><i style="height: 10px"></i><i style="height: 13px"></i>
+              </span>
+            </div>
+            <div style="font-size: 14px; line-height: 1.35; color: var(--ink2); margin-top: 1px">Push the ball with your fingertips and keep your eyes up.</div>
+            <div style="display: flex; gap: 4px; margin-top: 7px">
+              <span class="chip">Home</span><span class="chip">5 min</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="thumb" style="width: 108px; height: 61px"></div>
+          <div style="flex-grow: 1; min-width: 0">
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px">
+              <span class="slab" style="font-size: 16px; font-weight: 600">Weak Hand Dribbling</span>
+              <span style="font-size: 12px; color: var(--ink3)">Dribbling · L1</span>
+              <span class="meter">
+                <i style="height: 7px; background: var(--ink)"></i><i style="height: 10px"></i><i style="height: 13px"></i>
+              </span>
+            </div>
+            <div style="font-size: 14px; line-height: 1.35; color: var(--ink2); margin-top: 1px">Train the hand you avoid, or defenders will force you to that side.</div>
+            <div style="display: flex; gap: 4px; margin-top: 7px">
+              <span class="chip">Home</span><span class="chip">10 min</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="thumb" style="width: 108px; height: 61px"></div>
+          <div style="flex-grow: 1; min-width: 0">
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px">
+              <span class="slab" style="font-size: 16px; font-weight: 600">Stationary Ball Handling</span>
+              <span style="font-size: 12px; color: var(--ink3)">Dribbling · L1</span>
+              <span class="meter">
+                <i style="height: 7px; background: var(--ink)"></i><i style="height: 10px"></i><i style="height: 13px"></i>
+              </span>
+            </div>
+            <div style="font-size: 14px; line-height: 1.35; color: var(--ink2); margin-top: 1px">Build handle in one spot — no hoop and almost no space needed.</div>
+            <div style="display: flex; gap: 4px; margin-top: 7px">
+              <span class="chip">Home</span><span class="chip">10 min</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="thumb" style="width: 108px; height: 61px"></div>
+          <div style="flex-grow: 1; min-width: 0">
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px">
+              <span class="slab" style="font-size: 16px; font-weight: 600">Ball Feel Drills</span>
+              <span style="font-size: 12px; color: var(--ink3)">Fundamentals · L1</span>
+              <span class="meter">
+                <i style="height: 7px; background: var(--ink)"></i><i style="height: 10px"></i><i style="height: 13px"></i>
+              </span>
+            </div>
+            <div style="font-size: 14px; line-height: 1.35; color: var(--ink2); margin-top: 1px">Warm up your hands until the ball stops feeling foreign.</div>
+            <div style="display: flex; gap: 4px; margin-top: 7px">
+              <span class="chip">Home</span><span class="chip">5 min</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="position: absolute; left: 0; right: 0; bottom: 0; display: flex; background: var(--paper); border-top: 1px solid var(--rule-strong)">
+    <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; padding: 10px 0; color: var(--ink3)">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round">
+        <path d="M3 10.5 12 3l9 7.5V21h-6v-7H9v7H3z"></path>
+      </svg>
+      <span class="label" style="color: inherit">Home</span>
+    </div>
+    <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; padding: 10px 0; color: var(--ink3)">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+        <path d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+      <span class="label" style="color: inherit">Contents</span>
+    </div>
+    <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; padding: 10px 0; color: var(--accent)">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+        <circle cx="11" cy="11" r="7"></circle>
+        <path d="M20 20l-4.5-4.5"></path>
+      </svg>
+      <span class="label" style="color: inherit">Search</span>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

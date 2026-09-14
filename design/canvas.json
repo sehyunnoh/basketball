@@ -1,0 +1,93 @@
+{
+  "pages": [
+    { "id": "page-1", "name": "Screens" },
+    { "id": "page-2", "name": "Directions" }
+  ],
+  "artboards": [
+    { "file": "Main.dc.html", "title": "Home", "page": "page-1", "x": 0, "y": 0, "w": 390, "h": 844 },
+    { "file": "Category.dc.html", "title": "Category", "page": "page-1", "x": 490, "y": 0, "w": 390, "h": 1010 },
+    { "file": "SkillDetail.dc.html", "title": "Skill Detail", "page": "page-1", "x": 980, "y": 0, "w": 390, "h": 1760 },
+    { "file": "SkillDetailDark.dc.html", "title": "Skill Detail — dark", "page": "page-1", "x": 1470, "y": 0, "w": 390, "h": 1760 },
+    { "file": "Search.dc.html", "title": "Search", "page": "page-1", "x": 1960, "y": 0, "w": 390, "h": 940 },
+    { "file": "Browse.dc.html", "title": "Contents", "page": "page-1", "x": 2450, "y": 0, "w": 390, "h": 1180 },
+
+    { "file": "DirectionA.dc.html", "title": "A — Court Lines", "page": "page-2", "x": 0, "y": 0, "w": 390, "h": 844 },
+    { "file": "DirectionB.dc.html", "title": "B — Field Manual (chosen)", "page": "page-2", "x": 490, "y": 0, "w": 390, "h": 844 },
+    { "file": "DirectionC.dc.html", "title": "C — Dark Court", "page": "page-2", "x": 980, "y": 0, "w": 390, "h": 844 }
+  ],
+  "annotations": [
+    {
+      "id": "system",
+      "page": "page-1",
+      "x": 0,
+      "y": -400,
+      "w": 880,
+      "text": "THE SYSTEM — built and running in the app.\n\nType: Zilla Slab 600/700 for anything that names something; IBM Plex Sans 400/600 for everything else. Self-hosted, so the shell still reads offline in a gym.\n\nColour: one neutral ramp (paper, surface, ink, ink-2, ink-3, rule) plus a single burnt orange. Nothing else is coloured, so the video thumbnails are the only real colour on any screen.\n\nShape: 3px radii, hairline rules, 2px rules for structure. Boxes are ruled entries, not floating cards.\n\nSize: body 15px (was 14), summaries 14px, nothing under 12px — this gets read outdoors by a 9-year-old."
+    },
+    {
+      "id": "level-form",
+      "page": "page-1",
+      "x": 940,
+      "y": -400,
+      "w": 430,
+      "text": "LEVELS ARE FORM, NOT COLOUR.\n\nThe old green / amber / red badges read as safe / caution / danger. Level 3 is not a warning, it is further along — so the level is three filled segments plus the numeral, and it survives being printed, dimmed or colour-blind."
+    },
+    {
+      "id": "n-home",
+      "page": "page-1",
+      "x": 0,
+      "y": -170,
+      "w": 390,
+      "text": "HOME\nThe category grid became a numbered contents list with dot leaders — full-width rows are easier to hit one-handed, and the blurb now fits under each entry.\n\nSearch, then Start here, then the contents: three jobs in priority order."
+    },
+    {
+      "id": "n-category",
+      "page": "page-1",
+      "x": 490,
+      "y": -170,
+      "w": 390,
+      "text": "CATEGORY\n“Where are you?” sits above the levels — the first real question on a court, and Indoor court is the once-a-week resource.\n\nLevels are ruled sections, not boxed cards. L1 open, L2/L3 closed."
+    },
+    {
+      "id": "n-detail",
+      "page": "page-1",
+      "x": 980,
+      "y": -170,
+      "w": 390,
+      "text": "SKILL DETAIL\nKey points are numbered entries above the prose: the 9-year-old reads the video and these, and nothing else.\n\nThe video keeps square corners so the thumbnail reads as a plate in the page, not a sticker on it."
+    },
+    {
+      "id": "n-dark",
+      "page": "page-1",
+      "x": 1470,
+      "y": -170,
+      "w": 390,
+      "text": "DARK — SAME MARKUP\nIdentical HTML; only the token values change. There is not a single dark: variant in the codebase, which is why the two themes cannot drift apart.\n\nThis is the version that gets used in an evening gym."
+    },
+    {
+      "id": "n-search",
+      "page": "page-1",
+      "x": 1960,
+      "y": -170,
+      "w": 390,
+      "text": "SEARCH\nSearches names, summaries and tags, so “home” or “solo” work as queries.\n\nResults carry category, level and the level meter — placeable without opening them."
+    },
+    {
+      "id": "n-browse",
+      "page": "page-1",
+      "x": 2450,
+      "y": -170,
+      "w": 390,
+      "text": "CONTENTS\nThe index at the back of the book: every skill, no thumbnails, nothing to scroll past.\n\nThis is the screen for seeing the whole map at once."
+    },
+    {
+      "id": "dir-note",
+      "page": "page-2",
+      "x": 0,
+      "y": -280,
+      "w": 880,
+      "text": "The three directions, kept for the record. B was chosen and carried through — with one change: the warm paper tone was dropped for a neutral ramp, so dark mode is a straight token swap rather than a second palette.\n\nA and C are not built. If the kids react badly to B, A is the one to try next: same structure, much louder."
+    }
+  ],
+  "launch": { "view": "canvas", "page": "page-1" }
+}
