@@ -274,7 +274,7 @@ Category (카테고리)
 |---|---|---|
 | **Phase 1** | Fundamentals, Dribbling, Shooting | 각 카테고리 Level 1~3 모두 채움. 기술 20~30개. **사이트 기능은 이 단계에서 100% 완성한다.** |
 | ~~Phase 2~~ **완료** | Finishing, Passing, Defense | 27개 추가(총 55개). **화면 코드 0줄 변경** — 데이터 파일 3개 + `index.ts` 배열 한 줄로 끝났다 |
-| Phase 3 | Rebounding, Strategy, Athleticism | 위와 동일 |
+| ~~Phase 3~~ **완료** | Rebounding, Strategy, Athleticism | 27개 추가(총 82개, 9개 카테고리 전부). 위와 동일하게 데이터만 |
 
 - Phase 1의 3개는 **혼자서, 골대 하나로(혹은 없이) 연습 가능한** 영역이다.
   Passing·Defense는 상대가 필요해서 뒤로 미뤘다.
