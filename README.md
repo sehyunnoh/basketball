@@ -10,9 +10,10 @@ Built for a dad who never learned basketball, and his two kids.
 
 ## Status
 
-Phase 1 complete: **28 skills** across Fundamentals, Dribbling, and Shooting,
-each with levels 1–3 filled in. Site features are done — phases 2 and 3 are
-content-only additions.
+Phases 1 and 2 complete: **55 skills** across Fundamentals, Dribbling, Shooting,
+Finishing, Passing, and Defense, each with levels 1–3 filled in. Phase 2 was a
+data-only change — no screen, style or component was touched. Phase 3
+(Rebounding, Strategy, Athleticism) is the same shape of work.
 
 See [intent.md](./intent.md) for goals, scope, and content structure.
 
