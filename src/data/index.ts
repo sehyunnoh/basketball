@@ -1,15 +1,18 @@
 import type { Category, CategoryId, Level, Skill } from '../types'
 import { CATEGORIES } from './categories'
+import { ATHLETICISM } from './skills/athleticism'
 import { DEFENSE } from './skills/defense'
 import { DRIBBLING } from './skills/dribbling'
 import { FINISHING } from './skills/finishing'
 import { FUNDAMENTALS } from './skills/fundamentals'
 import { PASSING } from './skills/passing'
+import { REBOUNDING } from './skills/rebounding'
 import { SHOOTING } from './skills/shooting'
+import { STRATEGY } from './skills/strategy'
 
 /**
- * The single place new content lands. Adding a phase 2 category means adding a
- * file here and nothing else — no screen knows the category list up front.
+ * The single place content lands. Adding a category is a file plus one entry
+ * here and nothing else — no screen knows the category list up front.
  */
 export const SKILLS: Skill[] = [
   ...FUNDAMENTALS,
@@ -18,6 +21,9 @@ export const SKILLS: Skill[] = [
   ...FINISHING,
   ...PASSING,
   ...DEFENSE,
+  ...REBOUNDING,
+  ...STRATEGY,
+  ...ATHLETICISM,
 ]
 
 export const SKILL_BY_ID = new Map(SKILLS.map((s) => [s.id, s]))
@@ -65,6 +71,10 @@ if (import.meta.env.DEV) {
     }
     if (skill.keyPoints.length < 3 || skill.keyPoints.length > 5) {
       problems.push(`${skill.id} has ${skill.keyPoints.length} key points (want 3-5)`)
+    }
+    for (const point of skill.keyPoints) {
+      const words = point.split(/\s+/).length
+      if (words > 10) problems.push(`${skill.id} key point is ${words} words (max 10): "${point}"`)
     }
   }
 
