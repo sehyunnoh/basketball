@@ -23,7 +23,7 @@ No backend and no accounts — static content only. The one external call is
 [GoatCounter](https://www.goatcounter.com), a cookie-less page counter that
 stores no personal data; `src/lib/analytics.ts` counts each hash route itself,
 because GoatCounter's own script only fires once per page load. Forking this?
-Swap `hoops-handbook` in `index.html` for your own site code, or drop both
+Swap `basketball` in `index.html` for your own site code, or drop both
 script tags to turn it off.
 
 ## Design
