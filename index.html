@@ -23,6 +23,21 @@
     <meta name="apple-mobile-web-app-title" content="Hoops" />
 
     <link rel="preconnect" href="https://i.ytimg.com" />
+
+    <!--
+      GoatCounter: cookie-less, no personal data, nothing to consent to.
+      `no_onload` hands counting to src/lib/analytics.ts, which is what makes
+      the hash routes show up as separate pages. Forking this? Swap
+      hoops-handbook below for the site code you pick at goatcounter.com/signup.
+    -->
+    <script>
+      window.goatcounter = { no_onload: true }
+    </script>
+    <script
+      data-goatcounter="https://hoops-handbook.goatcounter.com/count"
+      async
+      src="https://gc.zgo.at/count.js"
+    ></script>
   </head>
   <body>
     <div id="root"></div>

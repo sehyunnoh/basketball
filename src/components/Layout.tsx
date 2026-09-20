@@ -1,4 +1,6 @@
-import { NavLink, Outlet, ScrollRestoration } from 'react-router'
+import { useEffect } from 'react'
+import { NavLink, Outlet, ScrollRestoration, useLocation } from 'react-router'
+import { countPageView } from '../lib/analytics'
 
 const NAV = [
   { to: '/', label: 'Home', icon: <path d="M3 10.5 12 3l9 7.5V21h-6v-7H9v7H3z" /> },
@@ -33,6 +35,9 @@ function Mark() {
 }
 
 export function Layout() {
+  const { pathname } = useLocation()
+  useEffect(() => countPageView(pathname), [pathname])
+
   return (
     <>
       <ScrollRestoration />
