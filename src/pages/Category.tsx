@@ -6,6 +6,7 @@ import type { CategoryId, SpaceTag } from '../types'
 import { SkillCard } from '../components/SkillCard'
 import { LevelMeter } from '../components/badges'
 import { NotFound } from './NotFound'
+import { useDocumentMeta } from '../lib/seo'
 
 const SPACES: SpaceTag[] = ['Home', 'School hoop', 'Indoor court']
 
@@ -13,6 +14,11 @@ export function Category() {
   const { categoryId } = useParams<{ categoryId: string }>()
   const category = CATEGORY_BY_ID.get(categoryId as CategoryId)
   const all = useMemo(() => (category ? skillsInCategory(category.id) : []), [category])
+
+  useDocumentMeta(
+    category ? `${category.name} — Hoops Handbook` : 'Hoops Handbook',
+    category?.blurb,
+  )
 
   const [space, setSpace] = useState<SpaceTag | null>(null)
   const [soloOnly, setSoloOnly] = useState(false)

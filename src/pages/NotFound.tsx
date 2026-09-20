@@ -1,6 +1,8 @@
 import { Link } from 'react-router'
+import { useDocumentMeta } from '../lib/seo'
 
 export function NotFound() {
+  useDocumentMeta('Page not found — Hoops Handbook', undefined, true)
   return (
     <div className="py-12 text-center">
       <p className="label text-ink-3">Page not found</p>

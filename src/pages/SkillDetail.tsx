@@ -5,10 +5,12 @@ import type { Skill } from '../types'
 import { VideoFacade } from '../components/VideoFacade'
 import { LevelBadge, TagChips } from '../components/badges'
 import { NotFound } from './NotFound'
+import { useDocumentMeta } from '../lib/seo'
 
 export function SkillDetail() {
   const { skillId } = useParams<{ skillId: string }>()
   const skill = skillId ? getSkill(skillId) : undefined
+  useDocumentMeta(skill ? `${skill.title} — Hoops Handbook` : 'Hoops Handbook', skill?.summary)
   if (!skill) return <NotFound />
 
   const category = CATEGORY_BY_ID.get(skill.category)

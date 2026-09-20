@@ -2,9 +2,14 @@ import { Link } from 'react-router'
 import { PUBLISHED_CATEGORIES, SKILLS, skillsInLevel } from '../data'
 import { LEVELS, LEVEL_NAMES } from '../types'
 import { LevelMeter } from '../components/badges'
+import { useDocumentMeta } from '../lib/seo'
 
 /** Every skill on one page — the index at the back of the book. */
 export function Browse() {
+  useDocumentMeta(
+    'Contents — Hoops Handbook',
+    `All ${SKILLS.length} basketball skills, by category and level.`,
+  )
   return (
     <div className="space-y-7">
       <header>

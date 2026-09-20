@@ -1,8 +1,10 @@
 import { Link, useNavigate } from 'react-router'
 import { useState } from 'react'
 import { PUBLISHED_CATEGORIES, START_HERE_SKILL, countByCategory } from '../data'
+import { useDocumentMeta } from '../lib/seo'
 
 export function Home() {
+  useDocumentMeta('Hoops Handbook')
   const navigate = useNavigate()
   const [query, setQuery] = useState('')
 

@@ -2,8 +2,11 @@ import { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router'
 import { searchSkills } from '../lib/search'
 import { SkillCard } from '../components/SkillCard'
+import { useDocumentMeta } from '../lib/seo'
 
 export function Search() {
+  // Query-dependent results are thin, duplicate content — keep it out of the index.
+  useDocumentMeta('Search — Hoops Handbook', undefined, true)
   const [params, setParams] = useSearchParams()
   const initial = params.get('q') ?? ''
   const [query, setQuery] = useState(initial)
