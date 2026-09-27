@@ -47,7 +47,7 @@ export function Layout() {
         <div className="mx-auto max-w-3xl px-4 pt-3 pb-2">
           <NavLink to="/" className="flex items-center gap-2">
             <Mark />
-            <span className="font-slab text-[19px] font-bold">Hoops Handbook</span>
+            <span className="font-slab text-[19px] font-bold">Basketball</span>
           </NavLink>
         </div>
         <div className="mx-auto max-w-3xl px-4">

@@ -6,7 +6,7 @@ import { useDocumentMeta } from '../lib/seo'
 
 export function Search() {
   // Query-dependent results are thin, duplicate content — keep it out of the index.
-  useDocumentMeta('Search — Hoops Handbook', undefined, true)
+  useDocumentMeta('Search — Basketball', undefined, true)
   const [params, setParams] = useSearchParams()
   const initial = params.get('q') ?? ''
   const [query, setQuery] = useState(initial)

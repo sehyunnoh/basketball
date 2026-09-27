@@ -1,4 +1,4 @@
-# Hoops Handbook
+# Basketball
 
 A mobile-first, installable (PWA) reference of basketball skills, organized by
 category and difficulty level. Each skill has a short explanation, key points,

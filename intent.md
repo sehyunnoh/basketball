@@ -345,7 +345,7 @@ Category (카테고리)
 - ~~라우팅 방식~~ → **HashRouter**. GitHub Pages 하위 경로에서 404 fallback 트릭 없이
   딥링크·새로고침이 동작하고, 서비스 워커 스코프도 단순해진다
 - ~~PWA 아이콘 디자인~~ → 슬레이트 배경 + 오렌지 농구공. 192/512/maskable/apple-touch 생성 완료
-- ~~사이트 제목~~ → **Hoops Handbook** (저장소명은 `basketball` 유지)
+- ~~사이트 제목~~ → **Basketball** (저장소명은 `basketball` 유지)
 - ~~아이들 나이대~~ → 아들 12세, 딸 9세. 설명은 15세 수준 영어로 (5.6)
 - ~~초기 카테고리 범위~~ → Fundamentals·Dribbling·Shooting 3개부터 (9.1)
 - ~~저장소/도메인~~ → `sehyunnoh/basketball`, `sehyunnoh.github.io/basketball/`, 커스텀 도메인 없음 (8장)

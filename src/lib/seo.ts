@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-const DEFAULT_TITLE = 'Hoops Handbook'
+const DEFAULT_TITLE = 'Basketball'
 const DEFAULT_DESCRIPTION =
   'A curated basketball skills library. Categories, levels, and one hand-picked video per skill.'
 

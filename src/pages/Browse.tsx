@@ -7,7 +7,7 @@ import { useDocumentMeta } from '../lib/seo'
 /** Every skill on one page — the index at the back of the book. */
 export function Browse() {
   useDocumentMeta(
-    'Contents — Hoops Handbook',
+    'Contents — Basketball',
     `All ${SKILLS.length} basketball skills, by category and level.`,
   )
   return (

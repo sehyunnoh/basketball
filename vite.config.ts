@@ -16,8 +16,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       manifest: {
         id: BASE,
-        name: 'Hoops Handbook',
-        short_name: 'Hoops',
+        name: 'Basketball',
+        short_name: 'Basketball',
         description:
           'A curated basketball skills library — categories, levels, and one hand-picked video per skill.',
         start_url: BASE,

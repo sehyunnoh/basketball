@@ -16,7 +16,7 @@ export function Category() {
   const all = useMemo(() => (category ? skillsInCategory(category.id) : []), [category])
 
   useDocumentMeta(
-    category ? `${category.name} — Hoops Handbook` : 'Hoops Handbook',
+    category ? `${category.name} — Basketball` : 'Basketball',
     category?.blurb,
   )
 
