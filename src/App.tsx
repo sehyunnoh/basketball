@@ -1,4 +1,4 @@
-import { RouterProvider, createHashRouter } from 'react-router'
+import { RouterProvider, createBrowserRouter } from 'react-router'
 import { Layout } from './components/Layout'
 import { Browse } from './pages/Browse'
 import { Category } from './pages/Category'
@@ -8,11 +8,12 @@ import { Search } from './pages/Search'
 import { SkillDetail } from './pages/SkillDetail'
 
 /**
- * Hash routing: GitHub Pages serves this from /basketball/ and has no server
- * side rewrite, so a hash keeps deep links and refreshes working without a
- * 404.html redirect trick — and keeps the service worker scope simple (8).
+ * Real paths so every skill and category is its own crawlable URL. GitHub
+ * Pages has no server-side rewrite, so vite-prerender.ts writes a static
+ * index.html per route at build time (and a 404.html for the rest).
  */
-const router = createHashRouter([
+const router = createBrowserRouter(
+  [
   {
     path: '/',
     element: <Layout />,
@@ -26,7 +27,9 @@ const router = createHashRouter([
       { path: '*', element: <NotFound /> },
     ],
   },
-])
+  ],
+  { basename: import.meta.env.BASE_URL.replace(/\/$/, '') },
+)
 
 export default function App() {
   return <RouterProvider router={router} />

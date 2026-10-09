@@ -1,10 +1,10 @@
 import { Link, useNavigate } from 'react-router'
 import { useState } from 'react'
 import { PUBLISHED_CATEGORIES, START_HERE_SKILL, countByCategory } from '../data'
-import { useDocumentMeta } from '../lib/seo'
+import { SITE_TITLE, useDocumentMeta } from '../lib/seo'
 
 export function Home() {
-  useDocumentMeta('Basketball')
+  useDocumentMeta(SITE_TITLE)
   const navigate = useNavigate()
   const [query, setQuery] = useState('')
 

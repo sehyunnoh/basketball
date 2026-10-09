@@ -2,14 +2,12 @@ import { Link } from 'react-router'
 import { PUBLISHED_CATEGORIES, SKILLS, skillsInLevel } from '../data'
 import { LEVELS, LEVEL_NAMES } from '../types'
 import { LevelMeter } from '../components/badges'
-import { useDocumentMeta } from '../lib/seo'
+import { browseMeta, useDocumentMeta } from '../lib/seo'
 
 /** Every skill on one page — the index at the back of the book. */
 export function Browse() {
-  useDocumentMeta(
-    'Contents — Basketball',
-    `All ${SKILLS.length} basketball skills, by category and level.`,
-  )
+  const meta = browseMeta(SKILLS.length)
+  useDocumentMeta(meta.title, meta.description)
   return (
     <div className="space-y-7">
       <header>

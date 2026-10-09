@@ -2,6 +2,7 @@ import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
+import { prerender } from './vite-prerender.ts'
 
 // GitHub Pages serves this repo from a sub-path. Every path-aware piece
 // (router, manifest, service worker scope) must agree on it.
@@ -12,6 +13,7 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
+    prerender(BASE),
     VitePWA({
       registerType: 'autoUpdate',
       manifest: {

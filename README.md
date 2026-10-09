@@ -76,8 +76,11 @@ and one with skills appears everywhere automatically.
 
 GitHub Pages serves this from the `/basketball/` sub-path, so the Vite `base`,
 the manifest `start_url`/`scope`, and the service worker scope all agree on it
-(`vite.config.ts`). Routing uses a hash router so deep links and refreshes work
-without a server-side rewrite.
+(`vite.config.ts`). Routing uses real paths (`/basketball/skill/<id>/`). GitHub
+Pages has no rewrite rules, so `vite-prerender.ts` writes a static `index.html`
+per route after the build — each with its own title, description, canonical and
+og/twitter tags — plus `404.html` and a generated `sitemap.xml`. Old
+`/#/skill/<id>` links are redirected to the new paths in `src/main.tsx`.
 
 The service worker uses `registerType: 'autoUpdate'`, so a new deploy replaces
 the cached app shell on the next visit. If you are testing locally and see a
