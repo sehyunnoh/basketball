@@ -235,6 +235,16 @@ export const SHOOTING: Skill[] = [
         title: 'How to Shoot a Pull Up Jump Shot',
         channel: 'SeeMikeDunn',
       },
+      {
+        youtubeId: 'n4HBFRdqsDE',
+        title: '6 Step Moves to Create Shooting Space',
+        channel: 'Jaehyeon',
+      },
+      {
+        youtubeId: 'WW9iqzENDBw',
+        title: '5 Skills to Shake Your Defender and Create Shooting Space',
+        channel: 'Jaehyeon',
+      },
     ],
     tags: {
       space: ['School hoop', 'Indoor court'],
